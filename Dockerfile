@@ -6,4 +6,4 @@ RUN mkdir /workdir
 ADD . /workdir
 WORKDIR /workdir
 
-RUN fpm-cook -t deb -p ubuntu recipe.rb
+RUN fpm-cook package -t deb -p ubuntu recipe.rb
