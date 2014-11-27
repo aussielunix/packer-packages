@@ -11,7 +11,7 @@ dependencies:
 
 test:
   override:
-    - docker run -d aussielunix/fpm-cook:ubuntu_14.04; sleep 2
+    - docker run -d aussielunix/fpm-cook:ubuntu_14.04; sleep 60
 
 deployment:
   production:
