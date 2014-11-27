@@ -13,8 +13,12 @@ test:
   override:
     - docker run -d aussielunix/fpm-cook:ubuntu_14.04; sleep 60
 
+general:
+  artifacts:
+    - /workdir
+
 deployment:
   production:
     branch: master
     commands:
-      - package_cloud push aussielunix/packer/ubuntu/14.04 /workdir/pkg/packer_0.7.2-1_amd64.deb
+      - package_cloud push aussielunix/packer/ubuntu/14.04 $CIRCLE_ARTIFACTS/pkg/packer_0.7.2-1_amd64.deb
