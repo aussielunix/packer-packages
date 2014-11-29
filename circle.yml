@@ -4,7 +4,7 @@ machine:
 
 dependencies:
   override:
-    - mkdir /workdir
+    - mkdir workdir
     - docker info
     - docker build --rm -t aussielunix/fpm-cookery-packer .
     - docker run --rm --name ubuntu-trusty-packer-deb -v `pwd`/workdir:/workdir -i -t aussielunix/fpm-cookery-packer
