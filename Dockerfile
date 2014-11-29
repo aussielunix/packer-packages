@@ -2,9 +2,7 @@ FROM aussielunix/fpm-cook:ubuntu_14.04
 
 MAINTAINER Mick Pollard <aussielunix@gmail.com>
 
-RUN mkdir /workdir
 ADD . /workdir
 WORKDIR /workdir
-VOLUME /workdir
 
-RUN fpm-cook package -t deb -p ubuntu recipe.rb
+CMD fpm-cook package -t deb -p ubuntu recipe.rb
