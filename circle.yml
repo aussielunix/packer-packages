@@ -9,3 +9,7 @@ dependencies:
 test:
   override:
     - docker run -v $(pwd):/data -i -t aussielunix/fpm-cook:ubuntu_14.04 fpm-cook package --pkg-dir=/pkg/ -t deb -p ubuntu recipe.rb
+
+general:
+  artifacts:
+    - /pkg/
