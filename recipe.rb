@@ -22,3 +22,4 @@ class Packer < FPM::Cookery::Recipe
     etc('profile.d').install workdir('packer.profile'), 'packer.sh'
   end
 end
+
