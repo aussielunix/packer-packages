@@ -5,7 +5,7 @@ machine:
 dependencies:
   override:
     - docker pull aussielunix/fpm-cook
-    - docker run --rm --name ubuntu-trusty-packer-deb -v `pwd`:/data -i -t aussielunix/fpm-cook
+    - docker run --rm --name ubuntu-trusty-packer-deb -v `pwd`:/data -i -t aussielunix/fpm-cook:ubuntu_14.04
 
 general:
   artifacts:
