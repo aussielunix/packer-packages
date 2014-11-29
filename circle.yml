@@ -8,8 +8,8 @@ dependencies:
 
 test:
   override:
-    - docker run -v $PWD:/home/ubuntu/data/ -i -t aussielunix/fpm-cook:ubuntu_14.04 fpm-cook package -t deb -p ubuntu recipe.rb
+    - docker run -v $PWD:/data/ -i -t aussielunix/fpm-cook:ubuntu_14.04 fpm-cook package -t deb -p ubuntu recipe.rb
 
 general:
   artifacts:
-    - /home/ubuntu/pkg/
+    - /home/ubuntu/packer-packages/pkg/
