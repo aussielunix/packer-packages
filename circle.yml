@@ -4,12 +4,11 @@ machine:
 
 dependencies:
   override:
-    - docker build --rm -t aussielunix/fpm-cookery-packer .
-    - docker run --rm --name ubuntu-trusty-packer-deb -v `pwd`/pkg:/workdir -i -t aussielunix/fpm-cookery-packer
+    - docker run --rm --name ubuntu-trusty-packer-deb -v `pwd`:/data -i -t aussielunix/fpm-cookery
 
 general:
   artifacts:
-    - pkg/
+    - /pkg/
 
 deployment:
   production:
