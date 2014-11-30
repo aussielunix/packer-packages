@@ -9,7 +9,7 @@ dependencies:
 
 test:
   override:
-    - docker run -v $PWD:/data/ -i -t aussielunix/fpm-cook:ubuntu_14.04 recipe.rb
+    - docker run -v $PWD:/data/ -i -t aussielunix/fpm-cook:ubuntu_14.04
 
 deployment:
   production:
